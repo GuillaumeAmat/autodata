@@ -3,22 +3,22 @@ DOCKER_IMAGE := ekino/docker-buildbox:node6.10-2017.03.30
 
 # Install project and dependencies
 install:
-	yarn
+	npm install
 
 # Lint and test
 lint_test:
-	yarn lint
-	yarn test
+	npm run lint
+	npm test
 
 # Run project
 dev:
-	yarn start
+	npm start
 
 build:
-	yarn run clean
-	yarn build:doc
-	yarn build:dev
-	yarn build:prod
+	npm run clean
+	npm run build:doc
+	npm run build:dev
+	npm run build:prod
 
 # Prepare for release
 prepare:
